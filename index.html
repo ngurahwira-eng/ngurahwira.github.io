@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1 class="title">Weather Dashboard</h1>
+      <p class="subtitle">Quickly look up current weather by city</p>
+    </header>
+
+    <section class="search">
+      <input id="cityInput" type="text" placeholder="Enter city name" aria-label="City name" />
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="card">
+        <div class="card-left">
+          <div id="city" class="city">—</div>
+          <div id="condition" class="condition">—</div>
+        </div>
+        <div class="card-right">
+          <div id="temp" class="temp">—°C</div>
+          <div id="humidity" class="humidity">Humidity: —%</div>
+        </div>
+      </div>
+      <div id="error" class="error"></div>
+    </section>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <footer class="footer">Powered by OpenWeatherMap</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

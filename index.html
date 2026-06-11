@@ -1,43 +1,99 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
+
+  <!-- Menyesuaikan tampilan agar responsif di berbagai ukuran layar -->
+  <!-- Referensi:
+  MDN - Viewport meta tag
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
+  -->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Weather Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Menggunakan font dari Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Menghubungkan file CSS -->
+  <!-- Referensi:
+  MDN - link element
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
+  -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+  <!-- GONG - Struktur utama aplikasi -->
+  <!-- Referensi:
+  MDN - main element
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+  -->
+
   <main class="app">
+
+    <!-- Header aplikasi -->
     <header class="header">
       <h3 class="title">Weather Dashboard</h3>
       <p class="subtitle">Quickly look up current weather by city</p>
     </header>
 
+    <!-- Form input kota dan tombol pencarian -->
+    <!-- Referensi:
+    MDN - HTML Forms
+    https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms
+    -->
+
     <section class="search">
-      <input id="cityInput" type="text" placeholder="Enter city name" aria-label="City name" />
-      <button id="searchBtn">Search</button>
+      <input
+        id="cityInput"
+        type="text"
+        placeholder="Enter city name"
+        aria-label="City name" />
+
+      <button id="searchBtn">
+        Search
+      </button>
     </section>
 
+    <!-- Area menampilkan hasil cuaca -->
     <section id="result" class="result hidden">
+
       <div class="card">
+
         <div class="card-left">
           <div id="city" class="city">—</div>
           <div id="condition" class="condition">—</div>
         </div>
+
         <div class="card-right">
           <div id="temp" class="temp">—°C</div>
-          <div id="humidity" class="humidity">Humidity: —%</div>
+          <div id="humidity" class="humidity">
+            Humidity: —%
+          </div>
         </div>
+
       </div>
+
       <div id="error" class="error"></div>
+
     </section>
 
+    <!-- Loader ketika proses mengambil data -->
     <div id="loader" class="loader hidden"></div>
 
-    <footer class="footer">Powered by OpenWeatherMap</footer>
+    <footer class="footer">
+      Powered by OpenWeatherMap
+    </footer>
+
   </main>
 
+  <!-- Menghubungkan file JavaScript -->
   <script src="script.js"></script>
+
 </body>
+
 </html>

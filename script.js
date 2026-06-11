@@ -1,5 +1,5 @@
 // Replace with your OpenWeatherMap API key
-const API_KEY = 'd076f0dcecbd6c4732366f8deede9bd4';
+const API_KEY = 'd076f0dcecbd6c4732366f8deede9bd4 ';
 
 const $ = id => document.getElementById(id);
 const cityInput = $('cityInput');
@@ -21,7 +21,7 @@ function showResult(show){
 }
 
 async function fetchWeather(city){
-  if(!API_KEY || API_KEY === 'YOUR_API_KEY_HERE'){
+  if(!API_KEY || API_KEY === 'd076f0dcecbd6c4732366f8deede9bd4'){
     throw new Error('No API key set. Edit script.js and add your OpenWeatherMap API key.');
   }
 

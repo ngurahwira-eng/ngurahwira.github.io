@@ -1,5 +1,5 @@
 // Replace with your OpenWeatherMap API key
-const API_KEY = 'YOUR_API_KEY_HERE';
+const API_KEY = 'd076f0dcecbd6c4732366f8deede9bd4E';
 
 const $ = id => document.getElementById(id);
 const cityInput = $('cityInput');
